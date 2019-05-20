@@ -1,0 +1,31 @@
+Alejandro Gonzalez  ID: 13828999
+
+List of Files: 
+- admin.html
+- booking.html
+
+- basic.css
+- custadmin.css
+- custom.css
+
+- 1819.svg
+- 32195.svg
+- Taxi-driver.svg
+
+- admin.inc.php
+- dbh.inc.php
+- request.inc.php
+
+- xhr.js
+- tool-admin.js
+- generate.js
+
+- Rest of files are third party libraries for styling and such.
+
+The system is separated so you'll have to change between Booking.html and Admin.html manually. 
+
+On Admin.html you have to refresh (after booking) and you'll see the bookings in the last 2 hours that don't have a taxi. 
+
+When you copy the reference number and search for it, you can assign a taxi to that reference number booking. 
+
+NOTE: RED = Unassined,  GREEN = Assigned.

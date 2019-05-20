@@ -1,0 +1,16 @@
+@import url("./bootstrap.css");
+
+/*
+Author: Alejandro González
+Auckland University of Technology
+*/
+
+body {
+	margin: 50px;
+}
+.mainpar {
+	margin-bottom: 35px;
+}
+.btn-custom {
+	margin-top: 20px;
+}

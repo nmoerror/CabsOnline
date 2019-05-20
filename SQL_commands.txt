@@ -1,0 +1,12 @@
+CREATE TABLE taxijobs(
+	Reference bigint(100) PRIMARY,
+	Job_Status varchar(15),
+	Cust_Name varchar(20),
+	Phone int(25),
+	Origin varchar(100),
+	Destination varchar(100),
+	Travel_Date date,
+	Travel_Time time,
+	Passengers int(3),
+	Vehicle varchar(15)
+);

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Administrator</title>
+		<link rel="stylesheet" href="./css/custadmin.css" />
+		<script type="text/javascript" src="./js/xhr.js"></script>
+		<script type="text/javascript" src="./js/tool-admin.js"></script>
+	</head>
+	<!-- 
+        Author: Alejandro González
+        Auckland University of Technology
+    -->
+	<body>
+		<!-- FORM SEARCH -->
+		<form>
+			<div class="form-row">
+				<img
+					class="mright"
+					src="./img/1819.svg"
+					width="36"
+					height="36"
+					alt=""
+				/>
+				<div class="col-4">
+					<input
+						class="form-control outline-dark"
+						id="reference"
+						type="text"
+						placeholder="Reference Number"
+						aria-label="Search"
+					/>
+				</div>
+				<div class="col-auto">
+					<button
+						type="button"
+						name="search-submit"
+						class="btn btn-outline-dark mb-2 shadow-sm px-md-5"
+						diabled
+						onClick="submitRequest('/assign2/inc/admin.inc.php','target',reference.value)"
+					>
+						Search
+					</button>
+				</div>
+			</div>
+		</form>
+		<!-- FORM SEARCH END -->
+		<div id="target" class="speciality"></div>
+		<!-- Table Begin -->
+		<hr class="my-2" />
+		<div class="mar">
+			<div class="container-fluid">
+				<div class="form-row align-items-center">
+					<h1 class="display-3  text-secondary">
+						Unassigned Taxi Bookings in the last 2 hours
+					</h1>
+					<img
+						class="mleft"
+						src="./img/32195.svg"
+						width="30"
+						height="30"
+						alt=""
+					/>
+				</div>
+				<table class="table table-hover" id="here">
+					<thead>
+						<tr>
+							<th scope="col">Booking #</th>
+							<th scope="col">Customer Name</th>
+							<th scope="col">Contact Phone</th>
+							<th scope="col">Pick up</th>
+							<th scope="col">Destination</th>
+							<th scope="col">Date</th>
+							<th scope="col">Time</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row"></th>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+				<button
+					class="btn btn-outline-dark mb-2 shadow-sm px-md-5"
+					href="#"
+					role="button"
+					onClick="requireUpdate('/assign2/inc/admin.inc.php', 'here')"
+				>
+					<img src="./img/179407.svg" width="30" height="30" alt="" />
+				</button>
+			</div>
+		</div>
+		<!-- Table Section END -->
+
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+			integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+		></script>
+		<script>
+			//this takes care of animations with opacity, display:none and class toggle
+			var _0xb4ae = [
+				"\x74\x6F\x6F\x6C\x74\x69\x70",
+				"\x5B\x64\x61\x74\x61\x2D\x74\x6F\x67\x67\x6C\x65\x3D\x22\x74\x6F\x6F\x6C\x74\x69\x70\x22\x5D",
+				"\x76\x61\x6C\x75\x65",
+				"\x72\x65\x66\x65\x72\x65\x6E\x63\x65",
+				"\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64",
+				"\x75\x6E\x6E\x61\x73\x69\x67\x6E\x65\x64",
+				"\x72\x65\x6D\x6F\x76\x65",
+				"\x63\x6C\x61\x73\x73\x4C\x69\x73\x74",
+				"\x6C\x6F\x61\x64\x65\x64\x54\x61\x62\x6C\x65",
+				"\x61\x73\x73\x69\x67\x6E\x65\x64",
+				"\x61\x64\x64",
+				"\x6B\x69\x6C\x6C",
+				"\x6F\x70\x61\x63\x69\x74\x79",
+				"\x73\x74\x79\x6C\x65",
+				"\x76\x69\x73\x69\x62\x69\x6C\x69\x74\x79",
+				"\x68\x69\x64\x64\x65\x6E",
+				"\x64\x69\x73\x70\x6C\x61\x79",
+				"\x6E\x6F\x6E\x65",
+				"\x2F\x61\x73\x73\x69\x67\x6E\x32\x2F\x69\x6E\x63\x2F\x61\x64\x6D\x69\x6E\x2E\x69\x6E\x63\x2E\x70\x68\x70"
+			];
+			eval(
+				(function(p, a, c, k, e, d) {
+					e = function(c) {
+						return (
+							(c < a ? "" : e(parseInt(c / a))) +
+							((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+						);
+					};
+					if (!"".replace(/^/, String)) {
+						while (c--) {
+							d[e(c)] = k[c] || e(c);
+						}
+						k = [
+							function(e) {
+								return d[e];
+							}
+						];
+						e = function() {
+							return "\\w+";
+						};
+						c = 1;
+					}
+					while (c--) {
+						if (k[c]) {
+							p = p.replace(new RegExp("\\b" + e(c) + "\\b", "g"), k[c]);
+						}
+					}
+					return p;
+				})(
+					"$(f(){$(a[1])[a[0]]()});f l(){d j=c[a[4]](a[3])[a[2]];c[a[4]](a[8])[a[7]][a[6]](a[5]);c[a[4]](a[8])[a[7]][a[q]](a[9]);d e=c[a[4]](a[h]);d i=p(f(){k(!e[a[b]][a[g]]){e[a[b]][a[g]]=1};k(e[a[b]][a[g]]>0){e[a[b]][a[g]]-=0.1}n{m(i)}},r);d o=u(f(){c[a[4]](a[h])[a[b]][a[A]]=a[z];c[a[4]](a[h])[a[b]][a[x]]=a[t]},s);d y=v(a[w],j)}",
+					37,
+					37,
+					"||||||||||_0xb4ae|13|document|var|_0xc4dcx3|function|12|11|_0xc4dcx4|_0xc4dcx2|if|attemptToAssign|clearInterval|else|_0xc4dcx5|setInterval|10|200|2500|17|setTimeout|assignTaxi|18|16|_0xc4dcx6|15|14".split(
+						"|"
+					),
+					0,
+					{}
+				)
+			);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<!-- Bootstrap + Custom-->
+		<link rel="stylesheet" href="./css/custom.css" />
+		<!-- Data handlers -->
+		<script type="text/javascript" src="./js/xhr.js"></script>
+		<script type="text/javascript" src="./js/generate.js"></script>
+		<title>As 1 - Home</title>
+	</head>
+	<!-- 
+        Author: Alejandro González
+        Auckland University of Technology
+    -->
+	<body">
+		<!--Jumbotron div-->
+		<div class="jumbotron clearfix shadow-sm">
+			<div id="myTitle"> <h1  class="display-4">CabsOnline</h1></div>
+			<hr class="my-3" />
+			<form name="myForm" id="target">
+				<div class="form-row">
+					<div class="form-group col-md-5">
+						<label for="fname">Name</label>
+						<input type="text" class="form-control" id="fname" name="Name"required/>
+					</div>
+					<div class="form-group col-md-0">
+						<label for="suffix">Suffix</label>
+						<select id="suffix" class="form-control">
+							<option selected>64</option>
+						</select>
+					</div>
+					<div class="form-group col-md-3">
+						<label for="phone">Contact Phone</label>
+						<input
+							type="number"
+							class="form-control"
+							id="phone"
+							placeholder="Phone"
+							required
+						/>
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-9">
+						<label for="origin">Pickup Location</label>
+						<input type="text" class="form-control" id="origin" required onFocus="activatePlacesSearch('origin')" />
+					</div>
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-9">
+						<label for="xdestination">Destination</label>
+						<input type="text" class="form-control" id="xdestination" required onFocus="activatePlacesSearch('xdestination')" />
+					</div>
+					
+				</div>
+				<div class="form-row">
+					<div class="form-group col-md-2">
+						<label class="control-label">Pick Up Date</label>
+						<div class="input-group date" id="datetimepicker1">
+							<input type="text" class="form-control" id="traveldate" required/>
+							<span class="input-group-addon">
+								<span class="glyphicon glyphicon-calendar"></span>
+							</span>
+						</div>
+					</div>
+					
+					<div class="form-group col-md-1">
+						<label for="passengers">Passengers</label>
+						<select id="passengers" class="form-control">
+							<option selected>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							<option>6</option>
+							<option>7</option>
+							<option>8</option>
+							<option>9</option>
+							<option>10+</option>
+						</select>
+					</div>
+					<div class="form-group col-md-1">
+						<label for="vehicle">Car Type</label>
+						<select id="vehicle" class="form-control">
+							<option selected>Standard</option>
+							<option>XL</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="form-rows align-items-center">
+					<div class="form-group">
+						
+						<button
+							id="Button"
+							name="submit"
+							type="button"
+							class="btn btn-outline-primary btn-md shadow-sm px-md-5"
+							disabled
+							onClick="submitRequest('/assign2/inc/request.inc.php','target',fname.value,suffix.value,phone.value,origin.value,xdestination.value,traveldate.value,passengers.value,vehicle.value)"
+						>
+							Book now
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://momentjs.com/downloads/moment.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"
+		/>
+		<link rel="stylesheet" href="./css/basic.css" />
+
+		<!-- Check for empty fields -->
+		<script>
+			var _0x1828=["\x76\x61\x6C","","\x64\x69\x73\x61\x62\x6C\x65\x64","\x61\x74\x74\x72","\x23\x42\x75\x74\x74\x6F\x6E","\x65\x61\x63\x68","\x5B\x72\x65\x71\x75\x69\x72\x65\x64\x5D","\x66\x69\x6C\x74\x65\x72","\x69\x6E\x70\x75\x74","\x72\x65\x6D\x6F\x76\x65\x41\x74\x74\x72","\x6B\x65\x79\x75\x70","\x6F\x6E"];
+			eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('c f(){i b=l;$(a[8])[a[7]](a[6])[a[5]](c(){g($(h)[a[0]]()===a[1]){$(a[4])[a[3]](a[2],a[2]);b=d;e d}});g(b){$(a[4])[a[9]](a[2])};e b}$(a[8])[a[7]](a[6])[a[k]](a[j],c(){f()})',22,22,'||||||||||_0x1828|_0xc5f3x2|function|false|return|checkInputs|if|this|var|10|11|true'.split('|'),0,{}))
+		</script>
+		<!-- Google API to autofill realistic addresses -->
+		<script>
+			var _0x5abb=["\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x70\x6C\x61\x63\x65\x73","\x6D\x61\x70\x73"];
+			eval(function(p,a,c,k,e,d){e=function(c){return c.toString(36)};if(!''.replace(/^/,String)){while(c--){d[c.toString(a)]=k[c]||c.toString(a)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('8 7(5){6 4=9[3[0]](5);6 c=a d[3[2]][3[1]].b(4)}',14,14,'|||_0x5abb|_0x2e61x3|_0x2e61x2|var|activatePlacesSearch|function|document|new|Autocomplete|_0x2e61x4|google'.split('|'),0,{}))
+		</script>
+		<!-- Load current time and limit booking times -->
+		<script>
+			var _0x8f60=["\x4C\x4C\x4C","\x66\x6F\x72\x6D\x61\x74","\x64\x61\x74\x65\x74\x69\x6D\x65\x70\x69\x63\x6B\x65\x72","\x23\x64\x61\x74\x65\x74\x69\x6D\x65\x70\x69\x63\x6B\x65\x72\x31"];
+			eval(function(p,a,c,k,e,d){e=function(c){return c};if(!''.replace(/^/,String)){while(c--){d[c]=k[c]||c}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('$(7(){6 5=9()[4[1]](4[0]);$(4[3])[4[2]]({8:5})})',10,10,'||||_0x8f60|_0x44dbx1|var|function|minDate|moment'.split('|'),0,{}))
+		</script>
+
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZlRuaWUCyss7rxDlWbRM-BRBz92elNsM&libraries=places&callback=activatePlacesSearch"
+		  ></script>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+		></script>
+	</body>
+</html>
