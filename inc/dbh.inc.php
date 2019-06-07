@@ -4,10 +4,10 @@
     -->
 <?php
 
-$servername = "cmslamp14.aut.ac.nz";
-$DBusername = "wqt4858";
-$DBpassword = "feb123456";
-$DBname = "wqt4858";
+$servername = "";
+$DBusername = "";
+$DBpassword = "";
+$DBname = "";
 
 $conn = mysqli_connect($servername, $DBusername, $DBpassword, $DBname);
 if (!$conn) {
